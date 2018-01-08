@@ -18,7 +18,8 @@ package_resource_overlays := $(strip \
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
     android-support-v4 \
-    android-support-v7-appcompat
+    android-support-v7-appcompat \
+    android-support-v7-preference
 
 LOCAL_RESOURCE_DIR := $(package_resource_overlays) $(LOCAL_RESOURCE_DIR)
 

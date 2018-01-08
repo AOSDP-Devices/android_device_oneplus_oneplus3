@@ -29,7 +29,7 @@
     <string name="srgb_mode_summary"></string>
     <string name="srgb_mode_title">sRGB mode</string>
     <string name="hbm_mode_summary"></string>
-    <string name="hbm_mode_title">High brightness mode</string>
+    <string name="hbm_mode_title">High Brightness Mode</string>
     <string name="proxi_summary_head">Check proximity sensor for handling gesture and fingerprint sensor</string>
     <string name="proxi_title_head">Proximity check</string>
     <string name="taptowake_summary">Double tap to wake device</string>
@@ -78,4 +78,5 @@
     <string name="panel_category_title">Screen Calibration</string>
     <string name="panel_category_summary">Set the display color profile</string>
     <string name="off_mode_title">Default</string>
+    <string name="tile_hbm_mode">High Brightness Mode</string>
 </resources>
