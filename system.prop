@@ -148,3 +148,8 @@ ro.sys.sdcardfs=true
 #enable camera read sensors data
 persist.camera.gyro.disable=0
 
+# Spectrum
+spectrum.support=1
+persist.spectrum.kernel=HolyDragon
+persist.spectrum.profile=0
+
