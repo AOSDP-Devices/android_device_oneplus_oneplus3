@@ -71,6 +71,7 @@ persist.data.iwlan.enable=true
 persist.radio.VT_HYBRID_ENABLE=1
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
 
 # NFC
 ro.nfc.port=I2C
@@ -124,12 +125,6 @@ persist.data.df.agg.dl_size=4096
 persist.data.df.mux_count=8
 persist.data.df.iwlan_mux=9
 persist.data.df.dev_name=rmnet_usb0
-
-#Volte & WFC
-persist.radio.VT_HYBRID_ENABLE=1 
-persist.dbg.volte_avail_ovr=1 
-persist.dbg.vt_avail_ovr=1 
-persist.dbg.wfc_avail_ovr=1 
 
 # Timeservice
 persist.timed.enable=false
