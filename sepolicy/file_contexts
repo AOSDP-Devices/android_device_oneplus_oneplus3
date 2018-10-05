@@ -4,6 +4,9 @@
 /data/fpc_images(/.*)?                                          u:object_r:fpc_images_file:s0
 /sys/devices/virtual/graphics/fb0(/.*)?                         u:object_r:sysfs_graphics:s0
 /sys/devices/soc/soc:fpc_fpc1020(/.*)?                          u:object_r:sysfs_fpc:s0
+/sys/devices/soc/soc:fpc_fpc1020/irq                            u:object_r:sysfs_fpc:s0
+/sys/devices/soc/soc:fpc_fpc1020/proximity_state                u:object_r:sysfs_fpc:s0
+/sys/devices/soc/soc:fpc_fpc1020/report_home                    u:object_r:sysfs_fpc:s0
 /sys/devices/virtual/timed_output/vibrator/vtg_level            u:object_r:sysfs_vibrator:s0
 /sys/devices/soc/900000\.qcom,mdss_mdp/caps      u:object_r:sysfs_mdss_mdp_caps:s0
 /sys/module/lpm_levels/parameters(/.*)?                u:object_r:sysfs_power_management:s0
