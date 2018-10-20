@@ -56,6 +56,7 @@ public class DeviceSettings extends PreferenceActivity implements
     public static final String KEY_SRGB_SWITCH = "srgb";
     public static final String KEY_HBM_SWITCH = "hbm";
     public static final String KEY_PROXI_SWITCH = "proxi";
+    public static final String KEY_ONEPLUS_SWITCH = "oneplus_mode";
     public static final String KEY_DCI_SWITCH = "dci";
     final String KEY_DEVICE_DOZE = "device_doze";
     final String KEY_DEVICE_DOZE_PACKAGE_NAME = "org.lineageos.settings.doze";
@@ -69,6 +70,7 @@ public class DeviceSettings extends PreferenceActivity implements
     private TwoStatePreference mSwapKeysSwitch;
     private TwoStatePreference mSRGBModeSwitch;
     private TwoStatePreference mHBMModeSwitch;
+    private TwoStatePreference mOneplusModeSwitch;
     private TwoStatePreference mDCIModeSwitch;
 
     @Override
@@ -123,6 +125,11 @@ public class DeviceSettings extends PreferenceActivity implements
         mHBMModeSwitch.setChecked(HBMModeSwitch.isCurrentlyEnabled(this));
         mHBMModeSwitch.setOnPreferenceChangeListener(new HBMModeSwitch());
 
+        mOneplusModeSwitch = (TwoStatePreference) findPreference(KEY_ONEPLUS_SWITCH);
+        mOneplusModeSwitch.setEnabled(OneplusModeSwitch.isSupported());
+        mOneplusModeSwitch.setChecked(OneplusModeSwitch.isCurrentlyEnabled(this));
+        mOneplusModeSwitch.setOnPreferenceChangeListener(new OneplusModeSwitch());
+		
         mDCIModeSwitch = (TwoStatePreference) findPreference(KEY_DCI_SWITCH);
         boolean isPanelSupported = DCIModeSwitch.isSupportedPanel();
         if (isPanelSupported) {

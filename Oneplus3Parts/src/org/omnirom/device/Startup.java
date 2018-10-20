@@ -108,6 +108,9 @@ public class Startup extends BroadcastReceiver {
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_DCI_SWITCH, false);
         restore(DCIModeSwitch.getFile(), enabled);
 
+        enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_ONEPLUS_SWITCH, false);
+        restore(OneplusModeSwitch.getFile(), enabled);
+
         VibratorStrengthPreference.restore(context);
     }
 }
