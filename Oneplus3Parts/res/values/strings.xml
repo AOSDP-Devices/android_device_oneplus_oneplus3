@@ -46,7 +46,9 @@
     <string name="slider_mode_title_center">Center position</string>
     <string name="slider_mode_title_bottom">Bottom position</string>
     <string name="dci_mode_summary"></string>
-    <string name="dci_mode_title">Wide color gamut mode</string>
+    <string name="dci_mode_title">DCI-P3</string>
+    <string name="night_mode_summary"></string>
+    <string name="night_mode_title">Neutral</string>
     <string name="oneplus_mode_summary"></string>
     <string name="oneplus_mode_title">Soft color mode</string>
 
@@ -73,4 +75,7 @@
     <string name="category_right_swipe_gesture">Right swipe</string>
     <string name="display_title">Display</string>
     <string name="device_doze_title">Ambient display</string>
+    <string name="panel_category_title">Screen Calibration</string>
+    <string name="panel_category_summary">Set the display color profile</string>
+    <string name="off_mode_title">Default</string>
 </resources>

@@ -16,6 +16,10 @@ package_resource_overlays := $(strip \
     $(wildcard $(foreach dir, $(DEVICE_PACKAGE_OVERLAYS), \
       $(addprefix $(dir)/, packages/apps/Oneplus3Parts/res))))
 
+LOCAL_STATIC_ANDROID_LIBRARIES := \
+    android-support-v4 \
+    android-support-v7-appcompat
+
 LOCAL_RESOURCE_DIR := $(package_resource_overlays) $(LOCAL_RESOURCE_DIR)
 
 LOCAL_PROGUARD_ENABLED := disabled

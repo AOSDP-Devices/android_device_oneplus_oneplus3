@@ -50,12 +50,14 @@ public class DeviceSettings extends PreferenceActivity implements
     private static final String KEY_SLIDER_MODE_CENTER = "slider_mode_center";
     private static final String KEY_SLIDER_MODE_BOTTOM = "slider_mode_bottom";
     private static final String KEY_CATEGORY_GRAPHICS = "graphics";
-    private static final String KEY_CATEGORY_DISPLAY = "display";
 
     public static final String KEY_SWAPKEYS_SWITCH = "swapkeys";
-    public static final String KEY_SRGB_SWITCH = "srgb";
+
     public static final String KEY_HBM_SWITCH = "hbm";
     public static final String KEY_PROXI_SWITCH = "proxi";
+
+    public static final String KEY_SRGB_SWITCH = "srgb";
+    public static final String KEY_NIGHT_SWITCH = "night";
     public static final String KEY_ONEPLUS_SWITCH = "oneplus_mode";
     public static final String KEY_DCI_SWITCH = "dci";
     final String KEY_DEVICE_DOZE = "device_doze";
@@ -68,10 +70,7 @@ public class DeviceSettings extends PreferenceActivity implements
     private ListPreference mSliderModeCenter;
     private ListPreference mSliderModeBottom;
     private TwoStatePreference mSwapKeysSwitch;
-    private TwoStatePreference mSRGBModeSwitch;
     private TwoStatePreference mHBMModeSwitch;
-    private TwoStatePreference mOneplusModeSwitch;
-    private TwoStatePreference mDCIModeSwitch;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -115,36 +114,10 @@ public class DeviceSettings extends PreferenceActivity implements
         mSwapKeysSwitch.setChecked(SwapHwKeysSwitch.isCurrentlyEnabled(this));
         mSwapKeysSwitch.setOnPreferenceChangeListener(new SwapHwKeysSwitch());
 
-        mSRGBModeSwitch = (TwoStatePreference) findPreference(KEY_SRGB_SWITCH);
-        mSRGBModeSwitch.setEnabled(SRGBModeSwitch.isSupported());
-        mSRGBModeSwitch.setChecked(SRGBModeSwitch.isCurrentlyEnabled(this));
-        mSRGBModeSwitch.setOnPreferenceChangeListener(new SRGBModeSwitch());
-
         mHBMModeSwitch = (TwoStatePreference) findPreference(KEY_HBM_SWITCH);
         mHBMModeSwitch.setEnabled(HBMModeSwitch.isSupported());
         mHBMModeSwitch.setChecked(HBMModeSwitch.isCurrentlyEnabled(this));
         mHBMModeSwitch.setOnPreferenceChangeListener(new HBMModeSwitch());
-
-        mOneplusModeSwitch = (TwoStatePreference) findPreference(KEY_ONEPLUS_SWITCH);
-        mOneplusModeSwitch.setEnabled(OneplusModeSwitch.isSupported());
-        mOneplusModeSwitch.setChecked(OneplusModeSwitch.isCurrentlyEnabled(this));
-        mOneplusModeSwitch.setOnPreferenceChangeListener(new OneplusModeSwitch());
-		
-        mDCIModeSwitch = (TwoStatePreference) findPreference(KEY_DCI_SWITCH);
-        boolean isPanelSupported = DCIModeSwitch.isSupportedPanel();
-        if (isPanelSupported) {
-            mDCIModeSwitch.setEnabled(DCIModeSwitch.isSupported());
-            mDCIModeSwitch.setChecked(DCIModeSwitch.isCurrentlyEnabled(this));
-            mDCIModeSwitch.setOnPreferenceChangeListener(new DCIModeSwitch());
-        } else {
-            PreferenceCategory graphicsCategory = (PreferenceCategory) findPreference(KEY_CATEGORY_GRAPHICS);
-            graphicsCategory.removePreference(mDCIModeSwitch);
-        }
-
-        if (!isAppInstalled(KEY_DEVICE_DOZE_PACKAGE_NAME)) {
-            PreferenceCategory displayCategory = (PreferenceCategory) findPreference(KEY_CATEGORY_DISPLAY);
-            displayCategory.removePreference(findPreference(KEY_DEVICE_DOZE));
-        }
     }
 
     @Override
