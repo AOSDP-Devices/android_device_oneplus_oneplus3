@@ -326,3 +326,7 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     SnapdragonCamera2 
+
+# Force disable blanking
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.force_no_blanking=true
