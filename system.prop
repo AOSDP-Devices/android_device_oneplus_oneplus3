@@ -30,6 +30,14 @@ persist.debug.force_burn_in=true
 # Battery
 ro.cutoff_voltage_mv=3250
 
+# Camera
+Camera.no_navigation_bar=true
+vidc.enc.dcvs.extra-buff-count=2
+vendor.vidc.enc.disable.pq=true
+persist.vendor.camera.display.umax=1920x1080
+persist.vendor.camera.display.lmax=1280x720
+camera.hal1.packagelist=com.whatsapp
+
 # Bluetooth
 bt.max.hfpclient.connections=1
 qcom.bluetooth.soc=rome
