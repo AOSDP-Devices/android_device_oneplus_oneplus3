@@ -140,6 +140,7 @@ TARGET_USES_QCOM_MM_AUDIO := true
 
 # Camera
 USE_CAMERA_STUB := true
+BOARD_USES_SNAPDRAGONCAMERA_VERSION := 2
 
 # Disable secure discard because it's SLOW
 BOARD_SUPPRESS_SECURE_ERASE := true
