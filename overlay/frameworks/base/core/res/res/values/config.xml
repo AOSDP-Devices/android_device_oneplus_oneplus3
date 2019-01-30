@@ -195,6 +195,9 @@
     <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
     <bool name="config_cellBroadcastAppLinks">true</bool>
 
+    <!-- Whether device supports double tap to wake -->
+    <bool name="config_supportDoubleTapWake">true</bool>
+
     <bool name="config_ui_enableFadingMarquee">false</bool>
 
     <!-- reference volume index for music stream to limit headphone volume and display warning -->
